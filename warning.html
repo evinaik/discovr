@@ -1,0 +1,63 @@
+<html>
+
+<head>
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+
+<style>
+    body {
+        /* background-color: honeydew; */
+        background: url(images/background.jpeg);
+        /* Full height */
+        height: 100%;
+
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .panel-heading {
+        padding: 5px 15px;
+    }
+
+    .panel-footer {
+        padding: 1px 15px;
+        color: #A0A0A0;
+    }
+
+    .profile-img {
+        width: 96px;
+        height: 96px;
+        margin: 0 auto 10px;
+        display: block;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+    }
+</style>
+
+<body>
+
+    <div class="container" style="margin-top:40px">
+        <div class="row">
+            <div class="panel panel-danger">
+                <div class="panel-heading"><h1>Virtual Reality Warning</h1></div>
+                <div class="panel-body" style="font-size: 2em;">Virtual reality technologies can potentially be dangerous. Please be aware of your surroundings. Make sure there are no overhead objects. Please remain seated unless you have to stand up for your activity.</div>
+            </div>
+        </div>
+        <div class="row text-center center-block">
+                <button id="press" type="button" class="btn btn-lg btn-block btn-warning">I understand and accept these risks.</button>
+            </div>
+    </div>
+</body>
+
+<script>
+        $('#press').on('click', function () {
+            window.location.href = './discovr.html';
+        });
+    </script>
+
+</html>
