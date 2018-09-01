@@ -4,7 +4,7 @@ DiscoVR is a prototype of a virtual reality memory palace built with [Babylon.js
 
 ## Background
 
-A common tool to power one's memory is called the "method of loci". The method of loci (Latin for "places") is a mnemonic device that leverages the brain's powerful spatial memory <sup>1</sup>. In other words, it is a way of remembering things by using a familiar location, such as one's home or hometown.
+A common tool to power one's memory is called the "method of loci". The method of loci (Latin for "places") is a mnemonic device that leverages the brain's powerful spatial memory[^1]. In other words, it is a way of remembering things by using a familiar location, such as one's home or hometown.
 
 While many have mastered this technique, preliminary research finds that there are others who have difficulty reusing the same location for different memories. For example, if someone uses their home as a loci, or "memory palace", for a speech on penguins (or butterflies or pull requests...), there have been instances where they will have difficulty using the same location for another speech.
 
@@ -24,5 +24,5 @@ As DiscoVR is only a prototype in its current state, it leverages [Babylon.js](h
 
 ## References
 
-<sup>1</sup> Qureshi, A., Rizvi, F., Syed, A., Shahid, A., & Manzoor, H. (2014). The method of loci as a mnemonic device to facilitate learning in endocrinology leads to improvement in student performance as measured by assessments. Advances in Physiology Education, 38(2), 140–144. http://doi.org/10.1152/advan.00092.2013
+[^1]: Qureshi, A., Rizvi, F., Syed, A., Shahid, A., & Manzoor, H. (2014). The method of loci as a mnemonic device to facilitate learning in endocrinology leads to improvement in student performance as measured by assessments. Advances in Physiology Education, 38(2), 140–144. http://doi.org/10.1152/advan.00092.2013
 
