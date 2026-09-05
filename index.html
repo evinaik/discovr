@@ -1,74 +1,34 @@
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-    crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
-
-<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
-    crossorigin="anonymous"></script>
-
-<html>
-
-<style>
-    body {
-        /* background-color: honeydew; */
-        background: url(images/background.jpeg);
-        /* Full height */
-        height: 100%;
-
-        /* Center and scale the image nicely */
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-
-    img {
-        color: black;
-    }
-
-    .discovr {
-        font-size: 6em;
-        color: #111144;
-    }
-
-    .btn-light {
-        border-color: teal;
-        margin-left: 20%;
-    }
-
-    .lock {
-        margin-top: -50%;
-        color: grey;
-    }
-
-    .fa {
-        color: white;
-    }
-</style>
-
-<body>
-    <div class="container">
-        <a href="./login.html">
-        <div class="text-center">
-            <img src="images/discovr_opt.png" />
-        </div>
-        <div class="text-center">
-            <div class="btn-group">
-                <!-- <div class="col-md-6"> -->
-                <!-- <a href="#" class="lock">
-                    <i class="fa fa-3x fa-key"></i>
-                </a> -->
-                <!-- </div>
-                <div class="col-md-6">
-                    <button type="button" class="btn btn-lg btn-light">Sign Up</button>
-                </div> -->
-            </div>
-        </div>
-        </a>
-    </div>
-</body>
-
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#192923" />
+    <title>DiscoVR · Your memory palace</title>
+  </head>
+  <body>
+    <canvas id="palace" tabindex="0" aria-label="Interactive memory palace. Drag to look and use W A S D or arrow keys to walk."></canvas>
+    <header>
+      <a class="brand" href="/" aria-label="DiscoVR home"><span class="brand-icon">◈</span> disco<span>vr</span><span class="edition">MEMORY PALACE</span></a>
+      <div class="actions"><span class="mode"><i></i> <span id="mode">Desktop exploration</span></span><button id="help" aria-expanded="false" aria-controls="guide">Controls <span>?</span></button><button id="vr" class="primary" disabled>Checking VR…</button></div>
+    </header>
+    <main class="intro">
+      <p class="eyebrow">A PLACE FOR EVERYTHING YOU REMEMBER</p>
+      <h1>Make room<br>for your mind.</h1>
+      <p>Explore your palace. Give an idea a place.<br>Find it again, right where you left it.</p>
+      <div class="location"><span>01</span><div>The courtyard<small>Your first memory palace</small></div></div>
+    </main>
+    <aside id="guide" hidden>
+      <h2>Find your way</h2>
+      <p><kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> or arrow keys to walk.</p>
+      <p>Drag the scene to look around. Click a glowing memory marker to read it.</p>
+      <p>In VR, use a controller thumbstick to aim a teleport, then release. Point and squeeze the trigger to select a memory.</p>
+      <p>On touchscreens, drag to look and use the arrows to move.</p>
+      <button id="reset">Return to entrance ↗</button>
+    </aside>
+    <aside class="memory" id="memory" hidden><button id="close-memory" aria-label="Close memory">×</button><p class="eyebrow">MEMORY ANCHOR</p><h2 id="memory-title"></h2><p id="memory-body"></p></aside>
+    <div class="touch-controls" aria-label="Movement controls"><button data-move="forward" aria-label="Move forward">↑</button><button data-move="left" aria-label="Move left">←</button><button data-move="back" aria-label="Move backward">↓</button><button data-move="right" aria-label="Move right">→</button></div>
+    <footer><div><span class="live-dot"></span><span id="status" role="status">Building your palace…</span></div><span class="hint">DRAG TO LOOK <b>·</b> WASD TO WALK <b>·</b> SELECT A MEMORY</span><span class="version">DiscoVR / 02</span></footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
 </html>
